@@ -104,7 +104,7 @@ function ratingSum() {
 
 // 16. Return the average rating value for all of her movies
 function ratingAverage() {
-  return 
+  return ratingSum() / beyonceHash.movies.map(movie => movie.rating).length
 }
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
@@ -174,4 +174,7 @@ function hairStyleFrequency() {
 // console.log(hitFiercenessAverage())
 
 // 15.
-console.log(ratingSum())
+// console.log(ratingSum())
+
+// 16.
+// console.log(ratingAverage())
