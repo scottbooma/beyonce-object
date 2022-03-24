@@ -54,7 +54,9 @@ function songsWithBodySuits() {
 }
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
-function getSongsByFiercenessGTE() {
+function getSongsByFiercenessGTE(number) {
+  const songsByFierceness = beyonceHash.hits.filter(hit => hit.fierceness >= number)
+  return songsByFierceness
 }
 
 // 7. Return an array with all of the movies Beyonce made after or during a given year
@@ -134,4 +136,7 @@ function hairStyleFrequency() {
 // console.log(allFiercenessRatings(beyonceHash))
 
 // 5.
-console.log(songsWithBodySuits(beyonceHash))
+// console.log(songsWithBodySuits(beyonceHash))
+
+// 6.
+// console.log(getSongsByFiercenessGTE(9))
