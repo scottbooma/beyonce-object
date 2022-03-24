@@ -93,6 +93,7 @@ function hitFiercenessSum() {
 
 // 14. Return the average fierceness value for all Beyonce's hit songs
 function hitFiercenessAverage() {
+return hitFiercenessSum() / allFiercenessRatings().length
 }
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
@@ -165,3 +166,6 @@ function hairStyleFrequency() {
 
 // 13.
 // console.log(hitFiercenessSum(beyonceHash))
+
+// 14.
+// console.log(hitFiercenessAverage())
