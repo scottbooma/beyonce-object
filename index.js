@@ -98,6 +98,7 @@ return hitFiercenessSum() / allFiercenessRatings().length
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
+  return beyonceHash.movies.map(movie => movie.rating)
 }
 
 // 16. Return the average rating value for all of her movies
@@ -169,3 +170,6 @@ function hairStyleFrequency() {
 
 // 14.
 // console.log(hitFiercenessAverage())
+
+// 15.
+console.log(ratingSum())
