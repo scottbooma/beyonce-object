@@ -73,8 +73,7 @@ function groupHits() {
 
 // 9. Return a hit song where Beyonce's hair is blonde
 function findBlondeHit() {
-  const blondeHit = beyonceHash.hits.find(hit => hit.hair.includes("blonde"))
-  return blondeHit
+  return beyonceHash.hits.find(hit => hit.hair.includes("blonde"))
 }
 
 // 10. Return the hit song "Sorry"
@@ -84,7 +83,8 @@ function sorry() {
 }
 
 // 11. Return a given song
-function getSong() {
+function getSong(song) {
+  return beyonceHash.hits.find(hit => hit.title === song)
 }
 
 // 12. Return all hit songs where Beyonce's fierceness rating is 10
@@ -159,4 +159,7 @@ function hairStyleFrequency() {
 // console.log(findBlondeHit())
 
 // 10.
-console.log(sorry(beyonceHash))
+// console.log(sorry(beyonceHash))
+
+// 11.
+// console.log(getSong("Let Me Upgrade You"))
