@@ -37,10 +37,14 @@ function printAllMovies(artist) {
 
 // 3. Return an array of all Beyonce's hit song titles
 function hitSongTitles() {
+  const hitSongs = beyonceHash.hits.map(hit => hit.title)
+  return hitSongs
 }
 
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
+  const fiercenessRatings = beyonceHash.hits.map(hit => hit.fierceness)
+  return fiercenessRatings
 }
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
@@ -121,3 +125,8 @@ function hairStyleFrequency() {
 // 2.
 // printAllMovies(beyonceHash)
 
+// 3.
+// console.log(hitSongTitles(beyonceHash))
+
+// 4.
+console.log(allFiercenessRatings(beyonceHash))
