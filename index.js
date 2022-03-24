@@ -26,7 +26,8 @@ const beyonceHash = {
 };
 
 // 1. Print all the songs
-function printAllSongs() {
+function printAllSongs(object) {
+  console.log(object.hits)
 }
 
 // 2. Print all the movies
@@ -108,3 +109,9 @@ function movieRatingsByName() {
 // 21. Return an object with Beyonce's hairstyles as the keys and a tally of each hairstyle, eg. `{ "blonde": 3, ... }`
 function hairStyleFrequency() {
 }
+
+
+
+// Testing Environment
+// 1.
+printAllSongs(beyonceHash)
