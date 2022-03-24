@@ -60,7 +60,9 @@ function getSongsByFiercenessGTE(number) {
 }
 
 // 7. Return an array with all of the movies Beyonce made after or during a given year
-function getMoviesByDateGTE() {
+function getMoviesByDateGTE(year) {
+  const moviesByDate = beyonceHash.movies.filter(movie => movie.year >= year)
+  return moviesByDate
 }
 
 // 8. Return all hit songs where Beyonce was in a group
@@ -140,3 +142,6 @@ function hairStyleFrequency() {
 
 // 6.
 // console.log(getSongsByFiercenessGTE(9))
+
+// 7.
+// console.log(getMoviesByDateGTE(2008))
