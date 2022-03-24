@@ -49,6 +49,8 @@ function allFiercenessRatings() {
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
+  const bodysuitSongs = beyonceHash.hits.filter(hit => hit.signature_look.includes("bodysuit"))
+  return bodysuitSongs
 }
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
@@ -129,4 +131,7 @@ function hairStyleFrequency() {
 // console.log(hitSongTitles(beyonceHash))
 
 // 4.
-console.log(allFiercenessRatings(beyonceHash))
+// console.log(allFiercenessRatings(beyonceHash))
+
+// 5.
+console.log(songsWithBodySuits(beyonceHash))
