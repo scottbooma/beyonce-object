@@ -89,6 +89,7 @@ function getSong(song) {
 
 // 12. Return all hit songs where Beyonce's fierceness rating is 10
 function fiercestHits() {
+  return beyonceHash.hits.filter(hit => hit.fierceness === 10)
 }
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
@@ -163,3 +164,6 @@ function hairStyleFrequency() {
 
 // 11.
 // console.log(getSong("Let Me Upgrade You"))
+
+// 12.
+// console.log(fiercestHits(beyonceHash))
