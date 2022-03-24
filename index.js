@@ -79,6 +79,8 @@ function findBlondeHit() {
 
 // 10. Return the hit song "Sorry"
 function sorry() {
+  const sorry = beyonceHash.hits.find(hit => hit.title === "Sorry")
+  return sorry
 }
 
 // 11. Return a given song
@@ -155,3 +157,6 @@ function hairStyleFrequency() {
 
 // 9.
 // console.log(findBlondeHit())
+
+// 10.
+console.log(sorry(beyonceHash))
