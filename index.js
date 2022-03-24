@@ -67,10 +67,13 @@ function getMoviesByDateGTE(year) {
 
 // 8. Return all hit songs where Beyonce was in a group
 function groupHits() {
+  const groupSongs = beyonceHash.hits.filter(hit => hit.group === true)
+  return groupSongs
 }
 
 // 9. Return a hit song where Beyonce's hair is blonde
 function findBlondeHit() {
+  const blondeHits = beyonceHash.hits.find()
 }
 
 // 10. Return the hit song "Sorry"
@@ -145,3 +148,6 @@ function hairStyleFrequency() {
 
 // 7.
 // console.log(getMoviesByDateGTE(2008))
+
+// 8.
+// console.log(groupHits(beyonceHash))
