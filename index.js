@@ -87,6 +87,8 @@ function fiercestHits() {
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
 function hitFiercenessSum() {
+  return allFiercenessRatings().reduce((previousFierceness, currentFierceness) => previousFierceness + currentFierceness, 
+  0);
 }
 
 // 14. Return the average fierceness value for all Beyonce's hit songs
@@ -138,7 +140,7 @@ function hairStyleFrequency() {
 // console.log(allFiercenessRatings(beyonceHash))
 
 // 5.
-console.log(songsWithBodySuits(beyonceHash))
+// console.log(songsWithBodySuits(beyonceHash))
 
 // 6.
 // console.log(getSongsByFiercenessGTE(9))
@@ -160,3 +162,6 @@ console.log(songsWithBodySuits(beyonceHash))
 
 // 12.
 // console.log(fiercestHits(beyonceHash))
+
+// 13.
+// console.log(hitFiercenessSum(beyonceHash))
