@@ -26,12 +26,13 @@ const beyonceHash = {
 };
 
 // 1. Print all the songs
-function printAllSongs(object) {
-  console.log(object.hits)
+function printAllSongs(artist) {
+  console.log(artist.hits)
 }
 
 // 2. Print all the movies
-function printAllMovies() {
+function printAllMovies(artist) {
+  console.log(artist.movies)
 }
 
 // 3. Return an array of all Beyonce's hit song titles
@@ -113,5 +114,10 @@ function hairStyleFrequency() {
 
 
 // Testing Environment
+
 // 1.
-printAllSongs(beyonceHash)
+// printAllSongs(beyonceHash)
+
+// 2.
+// printAllMovies(beyonceHash)
+
