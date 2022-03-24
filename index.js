@@ -88,7 +88,7 @@ function fiercestHits() {
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
 function hitFiercenessSum() {
   return allFiercenessRatings().reduce((previousFierceness, currentFierceness) => previousFierceness + currentFierceness, 
-  0);
+  0)
 }
 
 // 14. Return the average fierceness value for all Beyonce's hit songs
@@ -98,11 +98,13 @@ return hitFiercenessSum() / allFiercenessRatings().length
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
-  return beyonceHash.movies.map(movie => movie.rating)
+  return beyonceHash.movies.map(movie => movie.rating).reduce((previousRating, currentRating) => previousRating + currentRating,
+  0)
 }
 
 // 16. Return the average rating value for all of her movies
 function ratingAverage() {
+  return 
 }
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
