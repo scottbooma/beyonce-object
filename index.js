@@ -37,38 +37,32 @@ function printAllMovies(artist) {
 
 // 3. Return an array of all Beyonce's hit song titles
 function hitSongTitles() {
-  const hitSongs = beyonceHash.hits.map(hit => hit.title)
-  return hitSongs
+  return beyonceHash.hits.map(hit => hit.title)
 }
 
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
-  const fiercenessRatings = beyonceHash.hits.map(hit => hit.fierceness)
-  return fiercenessRatings
+  return beyonceHash.hits.map(hit => hit.fierceness)
 }
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 function songsWithBodySuits() {
-  const bodysuitSongs = beyonceHash.hits.filter(hit => hit.signature_look.includes("bodysuit"))
-  return bodysuitSongs
+  return beyonceHash.hits.filter(hit => hit.signature_look.includes("bodysuit") || hit.video_theme.includes("bodysuit"))
 }
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
 function getSongsByFiercenessGTE(number) {
-  const songsByFierceness = beyonceHash.hits.filter(hit => hit.fierceness >= number)
-  return songsByFierceness
+  return beyonceHash.hits.filter(hit => hit.fierceness >= number)
 }
 
 // 7. Return an array with all of the movies Beyonce made after or during a given year
 function getMoviesByDateGTE(year) {
-  const moviesByDate = beyonceHash.movies.filter(movie => movie.year >= year)
-  return moviesByDate
+  return beyonceHash.movies.filter(movie => movie.year >= year)
 }
 
 // 8. Return all hit songs where Beyonce was in a group
 function groupHits() {
-  const groupSongs = beyonceHash.hits.filter(hit => hit.group === true)
-  return groupSongs
+  return beyonceHash.hits.filter(hit => hit.group === true)
 }
 
 // 9. Return a hit song where Beyonce's hair is blonde
@@ -78,8 +72,7 @@ function findBlondeHit() {
 
 // 10. Return the hit song "Sorry"
 function sorry() {
-  const sorry = beyonceHash.hits.find(hit => hit.title === "Sorry")
-  return sorry
+  return beyonceHash.hits.find(hit => hit.title === "Sorry")
 }
 
 // 11. Return a given song
@@ -145,7 +138,7 @@ function hairStyleFrequency() {
 // console.log(allFiercenessRatings(beyonceHash))
 
 // 5.
-// console.log(songsWithBodySuits(beyonceHash))
+console.log(songsWithBodySuits(beyonceHash))
 
 // 6.
 // console.log(getSongsByFiercenessGTE(9))
