@@ -127,36 +127,38 @@ function uniqueHairstyles() {
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
 function songFiercenessByName() {
-  let object = {}
-  for(let hit of beyonceHash.hits) {
-    object = {
-      ...object,
+  return beyonceHash.hits.reduce((hitObject, hit) => {
+    return {
+      ...hitObject,
       [hit.title]: {
         fierceness: hit.fierceness,
         averageFierceness: hitFiercenessAverage(),
       }
     }
-  }
-  return object
+  }, {})
 }
 
 // 20. Return an object where the properties are movie names and the value is an object which contains that movie's rating and the average rating for all movies
 function movieRatingsByName() {
-  let object = {}
-  for(let movie of beyonceHash.movies) {
-    object = {
-      ...object,
+  return beyonceHash.movies.reduce((movieObject, movie) => {
+    return {
+      ...movieObject,
       [movie.title]: {
         rating: movie.rating,
         averageRating: ratingAverage(),
       }
     }
-  }
-  return object
+  }, {})
 }
 
 // 21. Return an object with Beyonce's hairstyles as the keys and a tally of each hairstyle, eg. `{ "blonde": 3, ... }`
 function hairStyleFrequency() {
+  return uniqueHairstyles().reduce((hairObject, hair) => {
+    return {
+      ...hairObject,
+      [hair]: beyonceHash.hits.map(hit => hit.hair).flat().filter(hairstyle => hairstyle === hair).length,
+    }
+  }, {})
 }
 
 
@@ -222,3 +224,7 @@ function hairStyleFrequency() {
 
 // 20.
 // console.log(movieRatingsByName())
+
+// 21.
+// console.log(hairStyleFrequency())
+
